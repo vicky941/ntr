@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 MAINTAINER devops venkyreddy72879@gmail.com
-RUN yum install java -y
+RUN apt-get update
+RUN apt install default-jdk  -y
 RUN mkdir /opt/tomcat
 WORKDIR /opt/tomcat
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz .
